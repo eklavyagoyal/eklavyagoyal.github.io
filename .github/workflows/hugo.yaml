@@ -59,7 +59,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "https://scorp1o24.github.io"          
+            --baseURL "https://scorp1o24.github.io" 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
