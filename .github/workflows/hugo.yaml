@@ -22,7 +22,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Default to bashh
+# Default to bash
 defaults:
   run:
     shell: bash
@@ -32,7 +32,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.135.0+extended
+      HUGO_VERSION: 0.135.0
     steps:
       - name: Install Hugo CLI
         run: |
@@ -59,7 +59,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseurl "https://scorp1o24.github.io/"
+            --baseURL "https://scorp1o24.github.io"          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -76,3 +76,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
