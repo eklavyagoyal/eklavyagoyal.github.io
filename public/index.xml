@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Eklavya Goyal</title>
-    <link>http://scorp1o24.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Eklavya Goyal</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Oct 2024 22:46:47 +0200</lastBuildDate>
-    <atom:link href="http://scorp1o24.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to my website!</title>
-      <link>http://scorp1o24.github.io/posts/05.10.2024.01/</link>
+      <link>http://localhost:1313/posts/05.10.2024.01/</link>
       <pubDate>Sat, 05 Oct 2024 22:46:47 +0200</pubDate>
-      <guid>http://scorp1o24.github.io/posts/05.10.2024.01/</guid>
+      <guid>http://localhost:1313/posts/05.10.2024.01/</guid>
       <description>&lt;p&gt;Hello everyone! I&amp;rsquo;m excited to welcome you to my personal website, where I will share my journey as a Bachelor’s student in Physics at the Technical University of Munich (TUM) and my experiences as a Machine Learning Assistant at Tools for Humanity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-this-website-is-about&#34;&gt;&#xA;  What This Website Is About&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-this-website-is-about&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;This website serves multiple purposes:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Learning Resource&lt;/strong&gt;: I plan to create and share resources related to my physics studies, including lecture notes, problem sets, and summaries of key concepts. I hope to provide materials that will help both myself and others understand complex topics better.&lt;/p&gt;</description>
     </item>
   </channel>

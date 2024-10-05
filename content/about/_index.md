@@ -3,8 +3,6 @@ title: "About Me"
 draft: false
 ---
 
-# About Me
-
 I am a Bachelor’s student at the Technical University of Munich (TUM), currently pursuing my degree in Physics. In parallel with my studies, I work as a **Machine Learning Assistant** at [Tools for Humanity](https://www.toolsforhumanity.com/), where I contribute to the development of machine learning models aimed at addressing global challenges.
 
 ### Current Role
