@@ -1,0 +1,68 @@
+baseURL = 'http://scorp1o24.github.io'
+languageCode = 'en-us'
+title = 'Eklavya Goyal'
+theme = 'hugo-coder'
+
+paginatation.pagerSize = 20
+
+[services]
+[services.disqus]
+disqusShortname = "Eklavya"
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Eklavya Goyal"
+  info = "B.Sc. Physics @ TUM | Machine Learning Assistant @ TFH"
+  description = "Eklavya Goyal's personal website"
+  keywords = "blog,developer,physicist,physics student, tum, technical university, technical university of munich, particel physics, theoretical physics, mathematics, analysis, analysis eklavya, analysis 1 for physicists, personal"
+  avatarurl = "images/eklavya.jpg"
+  #gravatar = "eklavya.goyal@tum.com"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2024
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/scorp1o24/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 2
+  url = "https://linkedin.com/in/eklavya-goyal"
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
+[[menu.main]]
+  name = "Teaching"
+  weight = 3
+  url = "/teaching"

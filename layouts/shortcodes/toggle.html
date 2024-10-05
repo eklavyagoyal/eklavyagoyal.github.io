@@ -1,0 +1,14 @@
+<div class="toggle">
+    <h3 class="{{ .Get "class" }}" style="cursor: pointer;" onclick="toggleDetails('{{ .Get "id" }}')">{{ .Get "title" }}</h3>
+    <div id="{{ .Get "id" }}" style="display: none;">
+        {{ .Inner | safeHTML }}
+    </div>
+</div>
+
+<script>
+function toggleDetails(courseId) {
+    const details = document.getElementById(courseId);
+    details.style.display = (details.style.display === "none" || details.style.display === "") ? "block" : "none";
+}
+</script>
+
