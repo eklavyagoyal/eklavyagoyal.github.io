@@ -10,3 +10,16 @@
     font-size: 1em; /* Adjust as needed */
 }
 
+ul {
+    list-style-type: disc; /* Default bullet */
+    padding-left: 20px; /* Indentation */
+}
+
+ul.custom-bullets {
+    list-style-type: square; /* Change bullet to square */
+}
+
+ul.custom-bullets li {
+    color: blue; /* Change bullet color */
+}
+
