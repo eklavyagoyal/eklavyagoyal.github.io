@@ -28,4 +28,5 @@ You can find more details about the courses I teach [here](/teaching/)
 For official inquiries, feel free to reach out to me at eklavya.goyal@tum.de. For any other queries, you can contact me at goyaleklavya24@gmail.com.
 
 A complete CV is available [here](/path/to/cv.pdf).
+PS: The link to CV is currently intentionally broken. 
 

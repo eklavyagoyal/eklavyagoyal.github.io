@@ -9,7 +9,7 @@ Here you can find all the course materials.
 {{< toggle id="ma9202week01" title="Week 01 (Oct 14 - Oct 18)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
+    <li><strong>Lecture Summary</strong>:<a href=/pdf/week01_notes.pdf> Version: Oct 18 </a> </li>
     <li><strong>Board pics</strong>: </li>
     <!-- <li><strong>Lecture Summary</strong>: </li>
     <li><strong>Lecture Summary</strong>: </li> -->
