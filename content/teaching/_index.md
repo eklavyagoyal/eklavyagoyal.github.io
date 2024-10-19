@@ -21,7 +21,7 @@ Here's a list of courses and tutorial sessions I will be tutoring for the upcomi
         <li>Convergence of sequences of functions</li>
         <li>Power series, Taylor series, and intro to Fourier series</li>
         <li>Simple ordinary differential equations</li>
-        <li>Banach spaces and Matrixexponential</li>
+        <li>Banach spaces and matrixexponential</li>
     </ul></li>
     <li><strong>Material</strong>:  <a href="notes/">Download Course Materials</a></li>
 </ul>
