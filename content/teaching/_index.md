@@ -19,7 +19,7 @@ Here's a list of courses and tutorial sessions I will be tutoring for the upcomi
         <li>Continuity and differentiability of functions of a single variable</li>
         <li>Riemann or Darboux integrals</li>
         <li>Convergence of sequences of functions</li>
-        <li>Power series, Taylor series, and Intro to Fourier series</li>
+        <li>Power series, Taylor series, and intro to Fourier series</li>
         <li>Simple ordinary differential equations</li>
         <li>Banach spaces and Matrixexponential</li>
     </ul></li>
