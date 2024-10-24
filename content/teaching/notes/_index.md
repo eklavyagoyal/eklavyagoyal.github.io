@@ -7,20 +7,14 @@ draft: false
 Here you can find all the course materials.
 
 {{< toggle id="ma9202week01" title="Week 01 (Oct 14 - Oct 18)" >}}
-
-<ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/week01_notes.pdf> Version: Oct 18 </a> </li>
-    <li><strong>Board pics</strong>: </li>
-    <!-- <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Lecture Summary</strong>: </li> -->
-</ul>
+No class this week...
 {{< /toggle >}}
 
 {{< toggle id="ma9202week02" title="Week 02 (Oct 21 - Oct 25)" >}}
-
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Board pics</strong>: </li>
+    <li><strong>Lecture Summary</strong>:<a href=/pdf/week01_notes.pdf> Version: Oct 18 </a> </li>
+    <li><strong>Board pics</strong>:<a href=/pdf/tafelbilder_24_10.pdf>Version: Oct 24 </a></li>
+    <li><strong>Presentation</strong>:<a href=/pdf/presentation_24_10.pdf>Version: Oct 24 </a></li>
     <!-- <li><strong>Lecture Summary</strong>: </li>
     <li><strong>Lecture Summary</strong>: </li> -->
 </ul>
