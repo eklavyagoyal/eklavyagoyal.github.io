@@ -55,10 +55,8 @@ No class this week...
 {{< toggle id="ma9202week07" title="Week 07 (Nov 25 - Nov 29)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Board pics</strong>: </li>
-    <!-- <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Lecture Summary</strong>: </li> -->
+     <li><strong>Notes</strong>:&nbsp<a href=/pdf/notes/week07_solutions.pdf> Notes, Version: Nov 28 </a> &nbsp and  &nbsp<a href=/pdf/notes/week07_notes.pdf> On continuity, Version: Nov 28</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/board_pics/tafelbilder_28.11.pdf>Version: Nov 28 </a></li>
 </ul>
 {{< /toggle >}}
 
