@@ -63,10 +63,8 @@ No class this week...
 {{< toggle id="ma9202week08" title="Week 08 (Dec 02 - Dec 06)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Board pics</strong>: </li>
-    <!-- <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Lecture Summary</strong>: </li> -->
+    <li><strong>Notes</strong>:&nbsp<a href=/pdf/notes/week08_notes.pdf> Notes on Landau symbols and Differentiability, Version: Dec 04</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/board_pics/tafelbilder_05.12.pdf>Version: Dec 05 </a></li>
 </ul>
 {{< /toggle >}}
 
