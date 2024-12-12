@@ -71,10 +71,9 @@ No class this week...
 {{< toggle id="ma9202week09" title="Week 09 (Dec 09 - Dec 13)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Board pics</strong>: </li>
-    <!-- <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Lecture Summary</strong>: </li> -->
+    <li><strong>Lecture Summary</strong>:&nbsp<a href=/pdf/notes/week09_notes.pdf>Notes on L'Hopital's Rule, Mean value theorem and Curve sketching, Version: Dec 12</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/board_pics/tafelbilder_12.12.pdf>Version: Dec 12</a> </li>
+    <li><strong>Miscellaneous</strong>:&nbsp <a href=/pdf/altklausuren/kurvendiskussion_aufgaben.pdf>Other questions on Curve Sketching, Version: Dec 12</a></li>
 </ul>
 {{< /toggle >}}
 {{< toggle id="ma9202week10" title="Week 10 (Dec 16 - Dec 20)" >}}
