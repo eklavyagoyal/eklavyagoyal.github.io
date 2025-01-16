@@ -93,10 +93,8 @@ No class this week...
 {{< /toggle >}}
 {{< toggle id="ma9202week12" title="Week 12 (Jan 13 - Jan 17)" >}}
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Board pics</strong>: </li>
-    <!-- <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Lecture Summary</strong>: </li> -->
+    <li><strong>Lecture Summary</strong>:&nbsp<a href=/pdf/notes/week12_notes.pdf>Notes on sequences of functions, Version: Jan 16</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/board_pics/tafelbilder_16.01.pdf>Version: Jan 09</a> </li>
 </ul>
 {{< /toggle >}}
 {{< toggle id="ma9202week13" title="Week 13 (Jan 20 - Jan 24)" >}}
