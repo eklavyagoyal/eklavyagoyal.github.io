@@ -106,10 +106,8 @@ No class this week...
 {{< toggle id="ma9202week14" title="Week 14 (Jan 27 - Jan 31)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Board pics</strong>: </li>
-    <!-- <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Lecture Summary</strong>: </li> -->
+    <li><strong>Lecture Summary</strong>:&nbsp<a href=/pdf/notes/week14_notes.pdf>Notes on Fourier coefficients and convergence of Fourier series, Version: Jan 30</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/board_pics/tafelbilder_30.01.pdf>Version: Jan 30</a> </li>
 </ul>
 {{< /toggle >}}
 
