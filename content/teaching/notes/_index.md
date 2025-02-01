@@ -99,8 +99,10 @@ No class this week...
 {{< /toggle >}}
 {{< toggle id="ma9202week13" title="Week 13 (Jan 20 - Jan 24)" >}}
 <ul>
-    <li><strong>Lecture Summary</strong>:&nbsp<a href=/pdf/notes/week13_notes.pdf>Notes on Taylor's theorem and Taylor series, Version: Jan 23</a> </li>
+    <li><strong>Lecture Summary</strong>:&nbsp<a href=/pdf/notes/week13_notes.pdf>Notes on Taylor's theorem and Taylor series, Version: Feb 01</a> </li>
+    <span style="color: red;">(01.02.2025) Correction: In Taylor's theorem and in Taylor series, x0 is not allowed to be a boundary point since we don't have differentiability on boundary points.</span>
     <li><strong>Board pics</strong>:&nbsp<a href=/pdf/board_pics/tafelbilder_23.01.pdf>Version: Jan 23</a> </li>
+
 </ul>
 {{< /toggle >}}
 {{< toggle id="ma9202week14" title="Week 14 (Jan 27 - Jan 31)" >}}
