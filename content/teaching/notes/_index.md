@@ -5,7 +5,7 @@ draft: false
 ---
 
 Here you can find all the course materials.
-
+[Here](/pdf/notes/notes.pdf) are the complete notes from week 05 - week 15 in one pdf file.
 {{< toggle id="ma9202week01" title="Week 01 (Oct 14 - Oct 18)" >}}
 No class this week...
 {{< /toggle >}}
@@ -114,11 +114,11 @@ No class this week...
 {{< /toggle >}}
 
 {{< toggle id="ma9202week15" title="Week 15 (Feb 03 - Feb 07)" >}}
-
 <ul>
-    <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Board pics</strong>: </li>
-    <!-- <li><strong>Lecture Summary</strong>: </li>
-    <li><strong>Lecture Summary</strong>: </li> -->
+    <li><strong>Lecture Summary</strong>:&nbsp<a href=/pdf/notes/week15_1_notes.pdf>Notes on (Ordinary, Linear) Differential Equations (ODEs), Version: Feb 06</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<span style="color: red">The tutorium was exceptionally held online on Thursday, 06.02.2025</span> </li>
+    <li><strong>Tutorial Transcript</strong>:&nbsp<a href=/pdf/notes/week15_2_notes.pdf>Transcript, written during the online tutorial, Version: Feb 06</a></li>
+    <li><strong>Quiz on Differential Equations</strong>:&nbsp<a href=/pdf/presentations/dgl.pdf>Five quiz questions on ODEs</a></li>
 </ul>
 {{< /toggle >}}
+The tutorials have now come to an end, and I just want to say a huge thank you to each and every one of you for being part of them! It was truly an awesome experience going through Analysis with all of you. I really appreciate your enthusiasm, discussions, and the way we all learned from each other. I’m sorry again that the last session had to be online, but I hope it was still helpful. I wish you all the best for the exams! Hope to see you all next semester!
