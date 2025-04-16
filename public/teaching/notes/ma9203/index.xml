@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Course Materials for MA9203 - Mathematics for Physicists 3 - Analysis 2 on Eklavya Goyal</title>
+    <link>http://localhost:50711/teaching/notes/ma9203/</link>
+    <description>Recent content in Course Materials for MA9203 - Mathematics for Physicists 3 - Analysis 2 on Eklavya Goyal</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:50711/teaching/notes/ma9203/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

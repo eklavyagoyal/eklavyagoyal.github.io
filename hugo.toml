@@ -1,4 +1,4 @@
-baseURL = 'http://scorp1o24.github.io'
+baseURL = 'http://eklavyagoyal.github.io'
 languageCode = 'en-us'
 title = 'Eklavya Goyal'
 theme = 'hugo-coder'
@@ -14,7 +14,7 @@ style = "github-dark"
 
 [params]
   author = "Eklavya Goyal"
-  info = "B.Sc. Physics @ TUM | Machine Learning Assistant @ TFH"
+  info = "B.Sc. Physics @ TUM | Working Student, Machine Learning @ TFH"
   description = "Eklavya Goyal's personal website"
   keywords = "blog,developer,physicist,physics student, tum, technical university, technical university of munich, particel physics, theoretical physics, mathematics, analysis, analysis eklavya, analysis 1 for physicists, personal"
   avatarurl = "images/eklavya.jpg"

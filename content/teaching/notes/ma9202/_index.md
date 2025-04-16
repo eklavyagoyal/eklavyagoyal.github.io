@@ -1,9 +1,10 @@
 ---
-title: "Course Materials Archive"
-date: 2024-10-05
-draft: false
+title: "Course Materials for MA9202 - Mathematics for Physicists 2 - Analysis 1"
+aliases: ["/ma9202"]
+redirect: "/teaching/notes/ma9202"
 ---
-{{<toggle id="ma9202" title="Course Materials for MA9202 - Mathematics for Physicists 2 - Analysis 1">}}
+
+
 Here you can find all the course materials.
 [Here](/pdf/notes/notes.pdf) are the complete notes from week 05 - week 15 in one pdf file.
 {{< toggle id="ma9202week01" title="Week 01 (Oct 14 - Oct 18)" >}}
@@ -123,9 +124,3 @@ No class this week...
 {{< /toggle >}}
 The tutorials have now come to an end, and I just want to say a huge thank you to each and every one of you for being part of them! It was truly an awesome experience going through Analysis with all of you. I really appreciate your enthusiasm, discussions, and the way we all learned from each other. I’m sorry again that the last session had to be online, but I hope it was still helpful. I wish you all the best for the exams! Hope to see you all next semester!
 
-
-{{</toggle >}}
-
-{{<toggle id="ma9203" title="Course Materials for MA9203 - Mathematics for Physicists 3 - Analysis 2">}}
-awesome
-{{</toggle>}}
