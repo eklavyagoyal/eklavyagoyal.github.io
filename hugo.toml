@@ -1,4 +1,4 @@
-baseURL = 'http://eklavyagoyal.github.io'
+baseURL = 'https://eklavyagoyal.github.io'
 languageCode = 'en-us'
 title = 'Eklavya Goyal'
 theme = 'hugo-coder'
