@@ -18,7 +18,7 @@ style = "github-dark"
   description = "Eklavya Goyal's personal website"
   keywords = "blog,developer,physicist,physics student, tum, technical university, technical university of munich, particel physics, theoretical physics, mathematics, analysis, analysis eklavya, analysis 1 for physicists, personal"
   avatarurl = "images/eklavya.jpg"
-  #gravatar = "eklavya.goyal@tum.com"
+#gravatar = "eklavya.goyal@tum.com"
 
   faviconSVG = "/img/favicon.svg"
   favicon_32 = "/img/favicon-32x32.png"
@@ -46,7 +46,7 @@ style = "github-dark"
   name = "Github"
   icon = "fa-brands fa-github fa-2x"
   weight = 1
-  url = "https://github.com/scorp1o24/"
+  url = "https://github.com/eklavyagoyal/"
 [[params.social]]
   name = "LinkedIn"
   icon = "fa-brands fa-linkedin fa-2x"
