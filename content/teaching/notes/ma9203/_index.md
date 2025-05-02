@@ -10,7 +10,7 @@ Here you can find all the course materials.
 {{< toggle id="ma9203week01" title="Week 01 (April 21 - April 25)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>:&nbsp;<a href=/pdf/ma9203/notes/week01-notes.pdf/>Notes on Curves, Curve Integrals and Motivation, Version: 02.05.2025</a> </li>
+    <li><strong>Lecture Summary</strong>:&nbsp;<a href=/pdf/ma9203/notes/week01-notes.pdf>Notes on Curves, Curve Integrals and Motivation, Version: 02.05.2025</a> </li>
     <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week01-board.pdf> Board Pics for 02/05/2025, Version: 02.05.2025</a></li>
     <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week01-sol.pdf>Handwritten solutions of Week 1 P-Questions, Version: 02.05.2025</a></li>
 
