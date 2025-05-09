@@ -3,7 +3,7 @@ title: "About Me"
 draft: false
 ---
 
-I am a Bachelor’s student at the Technical University of Munich (TUM), currently pursuing my degree in Physics. In parallel with my studies, I work as a **Machine Learning Assistant** at [Tools for Humanity](https://www.toolsforhumanity.com/), where I contribute to the development of machine learning models aimed at addressing global challenges.
+I am a Bachelor’s student at the Technical University of Munich (TUM), currently pursuing my degree in Physics. In parallel with my studies, I work as a **Working Student, Machine Learning** at [Tools for Humanity](https://www.toolsforhumanity.com/), where I contribute to the development of machine learning models aimed at addressing global challenges.
 
 ### Current Role
 
@@ -25,7 +25,7 @@ You can find more details about the courses I teach [here](/teaching/)
 
 ### Contact
 
-For official inquiries, feel free to reach out to me at eklavya.goyal@tum.de. For any other queries, you can contact me at goyaleklavya24@gmail.com.
+For official inquiries, feel free to reach out to me at eklavya.goyal@tum.de or eklavya.goyal@toolsforhumanity.com. For any other queries, you can contact me at goyaleklavya24@gmail.com.
 
 A complete CV is available [here](/path/to/cv.pdf).
 PS: The link to CV is currently intentionally broken. 

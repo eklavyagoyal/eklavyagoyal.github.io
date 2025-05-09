@@ -11,7 +11,7 @@ Here's a list of courses and tutorial sessions I will be tutoring for the upcomi
 {{< toggle id="ma9203" title="[MA9203] Mathematics for Physicists 3: Analysis 2" class="large-heading" >}}
 <ul>
     <li><strong>Room</strong>: &nbsp;<a href="https://nav.tum.de/room/5503.EG.337">Room 5503.EG.337(Seminarraum)</a> , Maschienenwesen(Mechanical) Building</li>  
-    <li><strong>Time</strong>:&nbsp;Fridays, 14:00 - 16:00</li>
+    <li><strong>Time</strong>:&nbsp;Fridays, 14:<span style="color:red;">05</span> - 16:00</li>
     <li><strong>Description</strong>:&nbsp;This module extends the foundations laid in the previous analysis course to functions of multiple variables and introduces key concepts in topology and vector analysis. Emphasis is placed on rigorously understanding differentiability, integration, and approximation in higher dimensions.</li>
     <li><strong>Contents</strong>:
     <ul>
