@@ -33,9 +33,10 @@ Tutorials start from Week 2!
 {{< toggle id="ma9203week04" title="Week 04 (May 12 - May 16)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
+
+  <li><strong>Lecture Summary</strong>:&nbsp;<a href=/pdf/ma9203/notes/></a> </li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week04-board.pdf> Board Pics for 16/05/2025, Version: 23.05.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week04-sol.pdf>Handwritten solutions of Week 4 P-Questions, Version: 23.05.2025</a></li>
 
 </ul>
 {{< /toggle >}}
@@ -43,11 +44,13 @@ Tutorials start from Week 2!
 {{< toggle id="ma9203week05" title="Week 05 (May 19 - May 23)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
+
+  <li><strong>Lecture Summary</strong>:&nbsp;<a href=/pdf/ma9203/notes/></a> </li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week05-board.pdf> Board Pics for 23/05/2025, Version: 23.05.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week05-sol.pdf>Handwritten solutions of Week 5 P-Questions, Version: 23.05.2025</a></li>
 
 </ul>
+
 {{< /toggle >}}
 
 {{< toggle id="ma9203week06" title="Week 06 (May 26 - May 30)" >}}
