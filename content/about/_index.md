@@ -16,7 +16,7 @@ I’m passionate about both physics and artificial intelligence, with a strong i
 ### Interests
 
 I am particularly fascinated by the potential of AI in advancing our understanding of physics and in solving complex problems. Outside of my academic and professional work, I enjoy exploring coding challenges, AI development, and thinking through complex physics puzzles.
-Some of my hobbies are swimming, playing table tennis, reading
+Some of my hobbies include swimming, playing table tennis and reading.
 
 ### Teaching and Tutoring
 

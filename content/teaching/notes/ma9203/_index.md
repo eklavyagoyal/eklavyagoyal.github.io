@@ -56,11 +56,13 @@ Tutorials start from Week 2!
 {{< toggle id="ma9203week06" title="Week 06 (May 26 - May 30)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
+
+  <li><strong>Lecture Summary</strong>:&nbsp;<a href=/pdf/ma9203/notes/></a> </li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week06-board.pdf> Board Pics for 30/05/2025, Version: 30.05.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week06-sol.pdf>Handwritten solutions of Week 6 P-Questions, Version: 30.05.2025</a></li>
 
 </ul>
+
 {{< /toggle >}}
 
 {{< toggle id="ma9203week07" title="Week 07 (June 02  - June 06)" >}}
