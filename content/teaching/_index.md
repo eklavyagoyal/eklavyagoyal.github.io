@@ -28,6 +28,7 @@ Here's a list of courses and tutorial sessions I will be tutoring for the upcomi
       <li>Introduction to (sub) manifolds and outlook toward physics applications (e.g. Noether’s theorem, gauge theory)</li>
 </ul></li>
     <li><strong>Material</strong>:&nbsp;<a href="notes/ma9203/">Download Course Materials</a></li>
+    <li><strong>WhatsApp Group</strong>:&nbsp;<a href="https://chat.whatsapp.com/EaXrrzQwCgTAqFU6oD4EQL">Here</a></li>
 </ul>
 {{< /toggle >}}
 
