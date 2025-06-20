@@ -66,31 +66,20 @@ Tutorials start from Week 2!
 {{< /toggle >}}
 
 {{< toggle id="ma9203week07" title="Week 07 (June 02  - June 06)" >}}
-
-<ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
-
-</ul>
+No MA9203 tutorials this week due to Pentecost.
 {{< /toggle >}}
 
 {{< toggle id="ma9203week08" title="Week 08 (June 9 - June 13)" >}}
-
-<ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
-
-</ul>
+My tutorial will be conducted by a substitute as I am on sick leave.
 {{< /toggle >}}
 
 {{< toggle id="ma9203week09" title="Week 09 (June 16 - June 20)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
+
+  <li><strong>Other Notes</strong>:&nbsp;<a href=/pdf/ma9203/notes/week09-p1alt.pdf>Alternate Solution to P8.1 part 2</a> </li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week09-board.pdf> Board Pics for 20/06/2025, Version: 20.06.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week09-sol.pdf>Handwritten solutions of Week 9 P-Questions, Version: 20.06.2025</a></li>
 
 </ul>
 {{< /toggle >}}
