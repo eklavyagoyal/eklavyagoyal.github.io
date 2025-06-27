@@ -5,7 +5,7 @@ redirect: "/teaching/notes/ma9203"
 ---
 
 
-Here you can find all the course materials.
+Here you can find all the course materials. [Here](/pdf/ma9203/notes/extra-ques.pdf) is a compilation of all the extra questions discussed during our tutorials.
 
 {{< toggle id="ma9203week01" title="Week 01 (April 21 - April 25)" >}}
 Tutorials start from Week 2!
@@ -87,9 +87,10 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 {{< toggle id="ma9203week10" title="Week 10 (June 23 - June 27)" >}}
 
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
+
+  <li><strong>Other Notes</strong>:&nbsp;<a href=/pdf/ma9203/notes/extra01-vectorana.pdf>Extra question on Vector Analysis, Question 1, Version:27.06.2025 </a> </li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week10-board.pdf> Board Pics for 27/06/2025, Version: 27.06.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week10-sol.pdf>Handwritten solutions of Week 10 P-Questions, Version: 27.06.2025</a></li>
 
 </ul>
 {{< /toggle >}}
@@ -120,6 +121,8 @@ My tutorial will be conducted by a substitute as I am on sick leave.
     <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
     <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
     <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
-
+    <li><a href=/pdf/ma9203/notes/extra-ques.pdf>Here </a> is a compilation of all the extra questions discussed during our tutorials.
+</li>
 </ul>
 {{< /toggle >}}
+
