@@ -5,7 +5,7 @@ redirect: "/teaching/notes/ma9203"
 ---
 
 
-Here you can find all the course materials. [Here](/pdf/ma9203/notes/extra-ques.pdf) is a compilation of all the extra questions discussed during our tutorials.
+Here you can find all the course materials. [Here ](/pdf/ma9203/notes/extra-ques.pdf) is a compilation of all the extra questions discussed during our tutorials.
 
 {{< toggle id="ma9203week01" title="Week 01 (April 21 - April 25)" >}}
 Tutorials start from Week 2!
@@ -88,7 +88,7 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 
 <ul>
 
-  <li><strong>Other Notes</strong>:&nbsp;<a href=/pdf/ma9203/notes/extra01-vectorana.pdf>Extra question on Vector Analysis, Question 1, Version:27.06.2025 </a> </li>
+  <li><strong>Other Notes</strong>:&nbsp;<a href=/pdf/ma9203/notes/extra01.pdf>Extra question on Vector Analysis, Question 1, Version:27.06.2025 </a> </li>
     <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week10-board.pdf> Board Pics for 27/06/2025, Version: 27.06.2025</a></li>
     <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week10-sol.pdf>Handwritten solutions of Week 10 P-Questions, Version: 27.06.2025</a></li>
 
@@ -96,22 +96,18 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 {{< /toggle >}}
 
 {{< toggle id="ma9203week11" title="Week 11 (June 30 - July 4)" >}}
-
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
-
+  <li><strong>Other Notes</strong>:&nbsp;<a href=/pdf/ma9203/notes/extra02.pdf>Extra question on continuity and differentiability, Question 2, Version:13.07.2025 </a> </li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week11-board.pdf> Board Pics for 04/07/2025, Version: 13.07.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week11-sol.pdf>Handwritten solutions of Week 11 P-Questions, Version: 13.07.2025</a></li>
 </ul>
 {{< /toggle >}}
 
 {{< toggle id="ma9203week12" title="Week 12 (July 7 - July 11)" >}}
-
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
-
+  <li><strong>Other Notes</strong>:&nbsp;<a href=/pdf/ma9203/notes/extra03.pdf>Extra question on Taylor polynomials in higher dimensions, Question 3, Version: 13.07.2025 </a> </li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week12-board.pdf> Board Pics for 11/07/2025, Version:13.07.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week12-sol.pdf>Handwritten solutions of Week 12 P-Questions, Version: 13.07.2025</a></li>
 </ul>
 {{< /toggle >}}
 
@@ -126,3 +122,13 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 </ul>
 {{< /toggle >}}
 
+{{< toggle id="ma9203week14" title="Week 14 (July 21 - July 25)" >}}
+
+<ul>
+    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
+    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
+    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
+    <li><a href=/pdf/ma9203/notes/extra-ques.pdf>Here </a> is a compilation of all the extra questions discussed during our tutorials.
+</li>
+</ul>
+{{< /toggle >}}
