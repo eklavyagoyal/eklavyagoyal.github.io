@@ -101,6 +101,23 @@ My tutorial will be conducted by a substitute as I am on sick leave.
     <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week11-board.pdf> Board Pics for 04/07/2025, Version: 13.07.2025</a></li>
     <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week11-sol.pdf>Handwritten solutions of Week 11 P-Questions, Version: 13.07.2025</a></li>
 </ul>
+
+Here are two cool animations I made for P11.3:
+<ul>
+<li> Osicllation with smaller alphas:</li>
+<video controls autoplay muted loop width="700">
+  <source src="/videos/ma9203/double-well-osc-week11.mp4" type="video/mp4">
+
+</video>
+
+<li>Larger alphas:</li>
+
+<video controls autoplay muted loop width="700">
+  <source src="/videos/ma9203/double-well-extreme-week11.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+</ul>
 {{< /toggle >}}
 
 {{< toggle id="ma9203week12" title="Week 12 (July 7 - July 11)" >}}
@@ -112,13 +129,17 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 {{< /toggle >}}
 
 {{< toggle id="ma9203week13" title="Week 13 (July 14 - July 18)" >}}
-
 <ul>
-    <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
-    <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
-    <li><a href=/pdf/ma9203/notes/extra-ques.pdf>Here </a> is a compilation of all the extra questions discussed during our tutorials.
-</li>
+  <li><strong>Other Notes</strong>:&nbsp; no Extra questions in today's Tutorial.</li>
+    <li><strong>Board pics</strong>:&nbsp;<a href=/pdf/ma9203/board-pics/week13-board.pdf> Board Pics for 18/07/2025, Version:18.07.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9203/solutions/week13-sol.pdf>Handwritten solutions of Week 13 P-Questions, Version: 18.07.2025</a></li>
+</ul>
+Here’s a cool animation I made for P12.3:
+
+<video controls autoplay muted loop width="700">
+  <source src="/videos/ma9203/torus-week13.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 </ul>
 {{< /toggle >}}
 
@@ -128,7 +149,6 @@ My tutorial will be conducted by a substitute as I am on sick leave.
     <li><strong>Lecture Summary</strong>:<a href=/pdf/notes/> </a> </li>
     <li><strong>Board pics</strong>:<a href=/pdf/board_pics/> </a></li>
     <li><strong>Presentation</strong>:<a href=/pdf//presentations/> </a></li>
-    <li><a href=/pdf/ma9203/notes/extra-ques.pdf>Here </a> is a compilation of all the extra questions discussed during our tutorials.
 </li>
 </ul>
 {{< /toggle >}}
