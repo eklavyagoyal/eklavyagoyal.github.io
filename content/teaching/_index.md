@@ -6,6 +6,28 @@ draft = false
 # Courses I Am Tutoring
 Here's a list of courses and tutorial sessions I will be tutoring for the upcoming semester.
 
+## Winter Semester 2024/25(WS24/25)
+{{< toggle id="ma9202-ws26" title="[MA9202] Mathematics for Physicists 2: Analysis 1" class="large-heading" >}}
+<ul>
+    <li><strong>Room</strong>:  <a href="https://nav.tum.de/room/5503.EG.337">Room 5503.EG.337(Seminarraum)</a> , Maschienenwesen(Mechanical) Building</li>  
+    <li><strong>Time</strong>: Thursdays, 10:00 - 12:00</li>
+    <li><strong>Description</strong>: This module introduces fundamental concepts and methods of analysis through the study of functions of a single variable. Upon successful completion of the course, students will be well-acquainted with the central concept of approximation and will be equipped to apply their knowledge effectively to solve basic problems.</li>
+    <li><strong>Contents</strong>:
+     <ul class="custom-bullets">The following topics will be covered during this course.
+        <li>Basics of University Mathematics: Sets, Logic, Group Theory etc</li>
+        <li>Real and complex numbers</li>
+        <li>Limits and convergence of sequences and series</li>
+        <li>Continuity and differentiability of functions of a single variable</li>
+        <li>Riemann or Darboux integrals</li>
+        <li>Convergence of sequences of functions</li>
+        <li>Power series, Taylor series, and intro to Fourier series</li>
+        <li>Simple ordinary differential equations</li>
+        <li>Banach spaces and matrixexponential</li>
+    </ul></li>
+    <li><strong>Material</strong>:&nbsp;<a href="notes/ma9202-ws26/">Download Course Materials</a></li>
+</ul>
+{{< /toggle >}}
+
 
 ## Summer Semester 2025(SS25)
 {{< toggle id="ma9203" title="[MA9203] Mathematics for Physicists 3: Analysis 2" class="large-heading" >}}
@@ -31,9 +53,31 @@ Here's a list of courses and tutorial sessions I will be tutoring for the upcomi
     <li><strong>WhatsApp Group</strong>:&nbsp;<a href="https://chat.whatsapp.com/EaXrrzQwCgTAqFU6oD4EQL">Here</a></li>
 </ul>
 {{< /toggle >}}
+{{< toggle id="summer-break" title="Summer Break 2025" class="large-heading" >}}
 
+{{< toggle id="vorkurs" title="Pre-Course in Mathematics and Physics for first-year Physics students" class="medium-heading" >}}
+<ul>
+    <li><strong>Room</strong>: &nbsp;<a href="https://nav.tum.de/room/5604.02.011">Room 5604.02.011</a> , Mathematics Building</li>  
+    <li><strong>Time</strong>:&nbsp;Monday - Friday, 11 - 12:30 and 15:00 - 16:30</li>
+    <li><strong>Description</strong>:&nbsp;Mentored incoming TUM students in a preparatory course covering foundational and advanced topics in mathematics and physics to strengthen their readiness for university-level studies.</li>
+    <li><strong>Contents</strong>:
+    <ul>
+        <li>Logic, sets, number systems, real numbers, mappings</li>
+        <li>Equations, inequalities, systems of linear equations, and matrices</li>
+        <li>Sequences, series, continuity, differentiation, trigonometric functions</li>
+        <li>Norms, scalar and vector products, exponential and logarithmic functions, integration</li>
+        <li>Complex numbers, multivariable and vector functions, polar and spherical coordinates</li>
+        <li>Differential equations and their physical applications</li>
+        <li>Contour integrals, potentials, differential operators, and multidimensional integration</li>
+        <li>Taylor series expansions</li>
+    </ul></li>
+    <li><strong>WhatsApp Group</strong>:&nbsp;<a href="https://chat.whatsapp.com/DkSfddUZ25C2U4UlLBoxws">Here</a></li>
+</ul>
+{{< /toggle >}}
+{{< /toggle >}}
 
 ## Winter Semester 2024/25(WS24/25)
+
 {{< toggle id="ma9202" title="[MA9202] Mathematics for Physicists 2: Analysis 1" class="large-heading" >}}
 <ul>
     <li><strong>Room</strong>:  <a href="https://nav.tum.de/room/5503.EG.337">Room 5503.EG.337(Seminarraum)</a> , Maschienenwesen(Mechanical) Building</li>  
