@@ -1,0 +1,55 @@
+{{- /* 
+  Optimized Figure Shortcode with lazy loading
+  Usage: {{< figure src="image.jpg" alt="Description" caption="Caption" >}}
+*/ -}}
+
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- $link := .Get "link" | default "" -}}
+
+{{- /* Try to get image resource for optimization */ -}}
+{{- $img := "" -}}
+{{- with $.Page.Resources.GetMatch $src -}}
+  {{- $img = .Resize "1200x" -}}
+{{- else -}}
+  {{- $img = resources.Get $src -}}
+  {{- if $img -}}
+    {{- $img = $img.Resize "1200x" -}}
+  {{- end -}}
+{{- end -}}
+
+<figure class="my-8 {{ $class }}">
+  {{- if $link -}}
+    <a href="{{ $link }}" target="_blank" rel="noopener noreferrer">
+  {{- end -}}
+  
+  {{- if $img -}}
+    <img 
+      src="{{ $img.RelPermalink }}" 
+      alt="{{ $alt }}"
+      loading="{{ $loading }}"
+      width="{{ $img.Width }}"
+      height="{{ $img.Height }}"
+      class="w-full rounded-lg shadow-md">
+  {{- else -}}
+    <img 
+      src="{{ $src }}" 
+      alt="{{ $alt }}"
+      loading="{{ $loading }}"
+      class="w-full rounded-lg shadow-md">
+  {{- end -}}
+  
+  {{- if $link -}}
+    </a>
+  {{- end -}}
+  
+  {{- if $caption -}}
+    <figcaption class="mt-2 text-sm text-center text-light-secondary dark:text-dark-secondary">
+      {{ $caption | markdownify }}
+    </figcaption>
+  {{- end -}}
+</figure>
+

@@ -1,0 +1,57 @@
+{{- /* Basic meta tags for SEO and browser compatibility */ -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{{- /* Description */ -}}
+{{- $description := .Description | default .Summary | default .Site.Params.description -}}
+<meta name="description" content="{{ $description }}">
+
+{{- /* Keywords */ -}}
+{{- if .Params.tags -}}
+  <meta name="keywords" content="{{ delimit .Params.tags ", " }}">
+{{- else if .Site.Params.keywords -}}
+  <meta name="keywords" content="{{ delimit .Site.Params.keywords ", " }}">
+{{- end -}}
+
+{{- /* Author */ -}}
+<meta name="author" content="{{ .Params.author | default .Site.Params.author }}">
+
+{{- /* Generator */ -}}
+<meta name="generator" content="{{ hugo.Generator }}">
+
+{{- /* Canonical URL */ -}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{- /* Robots */ -}}
+{{- if or .Params.noindex (eq hugo.Environment "development") -}}
+  <meta name="robots" content="noindex, nofollow">
+{{- else -}}
+  <meta name="robots" content="index, follow">
+{{- end -}}
+
+{{- /* Color scheme */ -}}
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a">
+
+{{- /* Apple touch icon */ -}}
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+{{- /* Format detection */ -}}
+<meta name="format-detection" content="telephone=no">
+
+{{- /* Referrer policy */ -}}
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+{{- /* Published time */ -}}
+{{- if not .PublishDate.IsZero -}}
+  <meta name="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end -}}
+
+{{- /* Modified time */ -}}
+{{- if not .Lastmod.IsZero -}}
+  <meta name="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end -}}
+

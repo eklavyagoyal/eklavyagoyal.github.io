@@ -1,68 +1,228 @@
-baseURL = 'https://eklavyagoyal.github.io'
+# Hugo Configuration - Eklavya Goyal's Personal Website
+# Modern, performant, accessible static site
+
+baseURL = 'https://eklavyagoyal.github.io/'
 languageCode = 'en-us'
 title = 'Eklavya Goyal'
-theme = 'hugo-coder'
+# theme removed - using root layouts
 
-paginatation.pagerSize = 20
+# Content settings
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
 
-[services]
-[services.disqus]
-disqusShortname = "Eklavya"
+# Pagination
+[pagination]
+  pagerSize = 12
+  path = 'page'
 
-[markup.highlight]
-style = "github-dark"
+# Permalinks
+[permalinks]
+  posts = '/posts/:slug/'
+  teaching = '/teaching/:slug/'
 
-[params]
-  author = "Eklavya Goyal"
-  info = "B.Sc. Physics @ TUM | Working Student, Machine Learning @ TFH"
-  description = "Eklavya Goyal's personal website"
-  keywords = "blog,developer,physicist,physics student, tum, technical university, technical university of munich, particel physics, theoretical physics, mathematics, analysis, analysis eklavya, analysis 1 for physicists, personal"
-  avatarurl = "images/eklavya.jpg"
-#gravatar = "eklavya.goyal@tum.com"
-
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
-
-  since = 2024
-
-  enableTwemoji = true
-
-  colorScheme = "auto"
-  hidecolorschemetoggle = false
-
-  # customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
-  # customJS = ["js/custom.js"]
-
+# Taxonomies
 [taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
-  author = "authors"
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
+
+# Menu
+[[menu.main]]
+  name = 'Blog'
+  weight = 1
+  url = '/posts/'
+  
+[[menu.main]]
+  name = 'About'
+  weight = 2
+  url = '/about/'
+  
+[[menu.main]]
+  name = 'Teaching'
+  weight = 3
+  url = '/teaching/'
+
+# Build settings
+[build]
+  writeStats = true
+  
+  [[build.cachebusters]]
+    source = "assets/.*\\.(js|ts|jsx|tsx)"
+    target = "(js|scripts|javascript)"
+  
+  [[build.cachebusters]]
+    source = "assets/.*\\.(.*)$"
+    target = "$1"
+
+# Minification
+[minify]
+  minifyOutput = true
+  
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+    [minify.tdewolff.css]
+      precision = 0
+    [minify.tdewolff.js]
+      precision = 0
+
+# Image processing
+[imaging]
+  resampleFilter = 'Lanczos'
+  quality = 85
+  anchor = 'Smart'
+
+# Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in markdown
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  
+  [markup.highlight]
+    style = 'github-dark'
+    lineNos = false
+    lineNumbersInTable = false
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    tabWidth = 2
+  
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+# Related content
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = false
+  
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+  
+  [[related.indices]]
+    name = 'categories'
+    weight = 50
+  
+  [[related.indices]]
+    name = 'date'
+    weight = 10
+
+# Sitemap
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+# Privacy settings
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Output formats
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+  taxonomy = ['HTML', 'RSS']
+  term = ['HTML', 'RSS']
+
+# Media types
+[mediaTypes]
+  [mediaTypes.'application/manifest+json']
+    suffixes = ['webmanifest']
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediatype = 'application/rss+xml'
+    baseName = 'feed'
+
+# Site parameters
+[params]
+  author = 'Eklavya Goyal'
+  info = 'B.Sc. Physics @ TUM | Working Student, Machine Learning @ TFH'
+  description = "Eklavya Goyal's personal website - Physics student at TUM and Machine Learning enthusiast sharing insights on physics, mathematics, and AI."
+  
+  keywords = [
+    'physics',
+    'machine learning',
+    'TUM',
+    'Technical University of Munich',
+    'mathematics',
+    'analysis',
+    'teaching',
+    'quantum mechanics',
+    'particle physics'
+  ]
+  
+  avatarurl = '/images/eklavya.jpg'
+  
+  # Images for OpenGraph
+  images = ['/images/eklavya.jpg']
+  
+  # Favicon
+  faviconSVG = '/favicon.svg'
+  favicon_32 = '/favicon-32x32.png'
+  favicon_16 = '/favicon-16x16.png'
+  
+  # Copyright
+  since = 2024
+  
+  # Features
+  math = false  # Enable globally or per-page
+  toc = true    # Table of contents
+  search = false  # Pagefind search (requires build step)
+  
+  # Comments (Giscus - GitHub Discussions)
+  [params.giscus]
+    enabled = false  # Set to true when configured
+    repo = ''  # e.g., 'username/repo'
+    repoId = ''
+    category = 'General'
+    categoryId = ''
+    mapping = 'pathname'
+    theme = 'preferred_color_scheme'
+  
+  # Analytics (optional)
+  [params.analytics]
+    [params.analytics.plausible]
+      enabled = false
+      domain = 'eklavyagoyal.github.io'  # Your domain
+    
+    # Alternative: Google Analytics
+    # googleAnalytics = 'G-XXXXXXXXXX'
 
 # Social links
 [[params.social]]
-  name = "Github"
-  icon = "fa-brands fa-github fa-2x"
+  name = 'Github'
+  url = 'https://github.com/eklavyagoyal/'
   weight = 1
-  url = "https://github.com/eklavyagoyal/"
-[[params.social]]
-  name = "LinkedIn"
-  icon = "fa-brands fa-linkedin fa-2x"
-  weight = 2
-  url = "https://linkedin.com/in/eklavya-goyal"
 
-# Menu links
-[[menu.main]]
-  name = "Blog"
-  weight = 1
-  url  = "posts/"
-[[menu.main]]
-  name = "About"
+[[params.social]]
+  name = 'LinkedIn'
+  url = 'https://linkedin.com/in/eklavya-goyal'
   weight = 2
-  url = "about/"
-[[menu.main]]
-  name = "Teaching"
-  weight = 3
-  url = "/teaching"
+
+# Uncomment to add more social links
+# [[params.social]]
+#   name = 'Twitter'
+#   url = 'https://twitter.com/username'
+#   weight = 3
+
+# [[params.social]]
+#   name = 'Email'
+#   url = 'mailto:eklavya.goyal@tum.de'
+#   weight = 4

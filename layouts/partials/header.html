@@ -1,0 +1,199 @@
+{{- /* Site Header with Navigation */ -}}
+<nav class="border-b border-light-border dark:border-dark-border transition-theme" role="navigation" aria-label="Main navigation">
+  <div class="container-wide">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      
+      {{- /* Logo / Site title */ -}}
+      <div class="flex items-center space-x-4">
+        <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-3 group" aria-label="Home">
+          {{- if .Site.Params.avatarurl -}}
+            <img src="{{ .Site.Params.avatarurl }}" 
+                 alt="{{ .Site.Params.author }}" 
+                 class="w-10 h-10 rounded-full ring-2 ring-light-border dark:ring-dark-border group-hover:ring-light-primary dark:group-hover:ring-dark-primary transition-all"
+                 loading="eager">
+          {{- end -}}
+          <span class="text-xl font-semibold text-light-fg dark:text-dark-fg group-hover:text-light-primary dark:group-hover:text-dark-primary transition-colors">
+            {{ .Site.Title }}
+          </span>
+        </a>
+      </div>
+      
+      {{- /* Desktop navigation */ -}}
+      <div class="hidden md:flex items-center space-x-1">
+        {{- range .Site.Menus.main -}}
+          {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
+          <a href="{{ .URL | relLangURL }}" 
+             class="nav-link px-4 py-2 rounded-md {{ if $active }}nav-link-active{{ end }}"
+             {{ if $active }}aria-current="page"{{ end }}>
+            {{ .Name }}
+          </a>
+        {{- end -}}
+        
+        {{- /* Search icon (if enabled) */ -}}
+        {{- if .Site.Params.search -}}
+          <button type="button" 
+                  id="search-toggle"
+                  class="p-2 rounded-md nav-link"
+                  aria-label="Search">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </button>
+        {{- end -}}
+        
+        {{- /* Dark mode toggle */ -}}
+        <button type="button" 
+                id="theme-toggle"
+                class="p-2 rounded-md nav-link"
+                aria-label="Toggle dark mode">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+      
+      {{- /* Mobile menu button */ -}}
+      <div class="md:hidden flex items-center space-x-2">
+        {{- /* Dark mode toggle (mobile) */ -}}
+        <button type="button" 
+                id="theme-toggle-mobile"
+                class="p-2 rounded-md nav-link"
+                aria-label="Toggle dark mode">
+          <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+          </svg>
+          <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        
+        <button type="button" 
+                id="mobile-menu-toggle"
+                class="p-2 rounded-md nav-link"
+                aria-label="Toggle mobile menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+          <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="menu-close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  {{- /* Mobile menu */ -}}
+  <div id="mobile-menu" class="hidden md:hidden border-t border-light-border dark:border-dark-border">
+    <div class="container-wide py-4 space-y-2">
+      {{- range .Site.Menus.main -}}
+        {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) -}}
+        <a href="{{ .URL | relLangURL }}" 
+           class="block px-4 py-2 rounded-md nav-link {{ if $active }}nav-link-active{{ end }}"
+           {{ if $active }}aria-current="page"{{ end }}>
+          {{ .Name }}
+        </a>
+      {{- end -}}
+      {{- if .Site.Params.search -}}
+        <button type="button" 
+                id="search-toggle-mobile"
+                class="block w-full text-left px-4 py-2 rounded-md nav-link">
+          <div class="flex items-center space-x-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span>Search</span>
+          </div>
+        </button>
+      {{- end -}}
+    </div>
+  </div>
+</nav>
+
+{{- /* Search modal (if enabled) */ -}}
+{{- if .Site.Params.search -}}
+<div id="search-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="search-title">
+  <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" id="search-backdrop"></div>
+  <div class="fixed inset-x-0 top-0 p-4 sm:p-6 md:p-20">
+    <div class="mx-auto max-w-2xl transform rounded-xl bg-white dark:bg-dark-muted shadow-2xl ring-1 ring-light-border dark:ring-dark-border">
+      <div id="search" class="p-4"></div>
+      <button type="button" 
+              id="search-close"
+              class="absolute top-4 right-4 text-light-secondary dark:text-dark-secondary hover:text-light-fg dark:hover:text-dark-fg"
+              aria-label="Close search">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+{{- end -}}
+
+<script>
+  // Mobile menu toggle
+  (function() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpenIcon = document.getElementById('menu-open-icon');
+    const menuCloseIcon = document.getElementById('menu-close-icon');
+    
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        menuOpenIcon?.classList.toggle('hidden');
+        menuCloseIcon?.classList.toggle('hidden');
+        mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
+      });
+    }
+  })();
+</script>
+
+{{- if .Site.Params.search -}}
+<script>
+  // Search modal toggle
+  (function() {
+    const searchModal = document.getElementById('search-modal');
+    const searchToggles = ['search-toggle', 'search-toggle-mobile'].map(id => document.getElementById(id)).filter(Boolean);
+    const searchClose = document.getElementById('search-close');
+    const searchBackdrop = document.getElementById('search-backdrop');
+    
+    if (searchModal && searchToggles.length > 0) {
+      searchToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          searchModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      if (searchClose) {
+        searchClose.addEventListener('click', () => {
+          searchModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        });
+      }
+      
+      if (searchBackdrop) {
+        searchBackdrop.addEventListener('click', () => {
+          searchModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        });
+      }
+      
+      // Close on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+          searchModal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+  })();
+</script>
+{{- end -}}
+

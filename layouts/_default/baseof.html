@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}" class="scroll-smooth">
+  <head>
+    {{- partial "head/meta.html" . -}}
+    {{- partial "head/opengraph.html" . -}}
+    {{- partial "head/schema.html" . -}}
+    
+    {{- $title := .Title -}}
+    {{- if .IsHome -}}
+      <title>{{ .Site.Title }} - {{ .Site.Params.info }}</title>
+    {{- else -}}
+      <title>{{ $title }} | {{ .Site.Title }}</title>
+    {{- end -}}
+    
+    {{- /* Preload critical fonts */ -}}
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/ibm-plex-mono-var.woff2" as="font" type="font/woff2" crossorigin>
+    
+    {{- /* Favicon */ -}}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    {{- /* Process CSS with Hugo Pipes */ -}}
+    {{- $mainCSS := resources.Get "css/main.css" -}}
+    {{- $syntaxCSS := resources.Get "css/syntax.css" -}}
+    {{- $css := slice $mainCSS $syntaxCSS | resources.Concat "css/bundle.css" -}}
+    
+    {{- if hugo.IsProduction -}}
+      {{- $css = $css | postCSS | minify | fingerprint -}}
+    {{- else -}}
+      {{- $css = $css | postCSS -}}
+    {{- end -}}
+    
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $css.Data.Integrity }}"{{ end }}>
+    
+    {{- /* Dark mode prevention script - inline to prevent FOUC */ -}}
+    <script>
+      // Immediately set theme before page renders
+      (function() {
+        const theme = localStorage.getItem('theme') || 
+                     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      })();
+    </script>
+    
+    {{- /* KaTeX CSS for math */ -}}
+    {{- if or .Params.math .Site.Params.math -}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" 
+          integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" 
+          crossorigin="anonymous">
+    {{- end -}}
+    
+    {{- /* RSS Feed */ -}}
+    {{ with .OutputFormats.Get "RSS" -}}
+      <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+    {{- end }}
+    
+    {{- /* Analytics */ -}}
+    {{- partial "head/analytics.html" . -}}
+  </head>
+  
+  <body class="min-h-screen flex flex-col">
+    {{- /* Skip to main content for accessibility */ -}}
+    <a href="#main-content" class="skip-link">
+      Skip to main content
+    </a>
+    
+    {{- /* Header */ -}}
+    <header>
+      {{- partial "header.html" . -}}
+    </header>
+    
+    {{- /* Reading progress bar for blog posts */ -}}
+    {{- if eq .Type "posts" -}}
+    <div id="reading-progress" class="reading-progress" style="width: 0%" role="progressbar" aria-label="Reading progress"></div>
+    {{- end -}}
+    
+    {{- /* Main content */ -}}
+    <main id="main-content" class="flex-grow" role="main">
+      {{- block "main" . }}{{- end }}
+    </main>
+    
+    {{- /* Footer */ -}}
+    <footer>
+      {{- partial "footer.html" . -}}
+    </footer>
+    
+    {{- /* JavaScript */ -}}
+    {{- $darkMode := resources.Get "js/theme-toggle.js" -}}
+    {{- if hugo.IsProduction -}}
+      {{- $darkMode = $darkMode | minify | fingerprint -}}
+    {{- end -}}
+    <script defer src="{{ $darkMode.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $darkMode.Data.Integrity }}"{{ end }}></script>
+    
+    {{- if eq .Type "posts" -}}
+      {{- $readingProgress := resources.Get "js/reading-progress.js" -}}
+      {{- $toc := resources.Get "js/toc.js" -}}
+      {{- if hugo.IsProduction -}}
+        {{- $readingProgress = $readingProgress | minify | fingerprint -}}
+        {{- $toc = $toc | minify | fingerprint -}}
+      {{- end -}}
+      <script defer src="{{ $readingProgress.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $readingProgress.Data.Integrity }}"{{ end }}></script>
+      <script defer src="{{ $toc.RelPermalink }}"{{ if hugo.IsProduction }} integrity="{{ $toc.Data.Integrity }}"{{ end }}></script>
+    {{- end -}}
+    
+    {{- /* KaTeX JS for math rendering */ -}}
+    {{- if or .Params.math .Site.Params.math -}}
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" 
+            integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" 
+            crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+            integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" 
+            crossorigin="anonymous"
+            onload="renderMathInElement(document.body, {
+              delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\[', right: '\\]', display: true},
+                {left: '\\(', right: '\\)', display: false}
+              ],
+              throwOnError: false
+            });"></script>
+    {{- end -}}
+    
+    {{- /* Pagefind search */ -}}
+    {{- if .Site.Params.search -}}
+    <script defer src="/pagefind/pagefind-ui.js"></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+      });
+    </script>
+    {{- end -}}
+  </body>
+</html>
+

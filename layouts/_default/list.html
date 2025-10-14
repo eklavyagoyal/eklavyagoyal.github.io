@@ -1,0 +1,160 @@
+{{- define "main" -}}
+{{- /* List layout for blog posts, categories, tags, etc. */ -}}
+
+<div class="container-wide py-12 md:py-20">
+  {{- /* Page header */ -}}
+  <header class="mb-12 text-center space-y-4">
+    <h1 class="text-4xl md:text-5xl font-bold text-light-fg dark:text-dark-fg text-balance">
+      {{ .Title }}
+    </h1>
+    
+    {{- if .Description -}}
+      <p class="text-xl text-light-secondary dark:text-dark-secondary max-w-3xl mx-auto">
+        {{ .Description }}
+      </p>
+    {{- end -}}
+    
+    {{- /* Show post count */ -}}
+    {{- $pages := .Pages -}}
+    {{- if $pages -}}
+      <p class="text-sm text-light-secondary dark:text-dark-secondary">
+        {{ len $pages }} {{ if eq (len $pages) 1 }}post{{ else }}posts{{ end }}
+      </p>
+    {{- end -}}
+  </header>
+  
+  {{- /* Page content (if any) */ -}}
+  {{- if .Content -}}
+    <div class="prose dark:prose-dark max-w-none mb-12">
+      {{ .Content }}
+    </div>
+  {{- end -}}
+  
+  {{- /* Posts grid */ -}}
+  {{- if $pages -}}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{- range $pages -}}
+        <article class="card group h-full flex flex-col">
+          {{- /* Featured image if available */ -}}
+          {{- with .Resources.GetMatch "featured*" -}}
+            {{- $image := .Resize "600x300" -}}
+            <a href="{{ $.Permalink }}" class="block mb-4 -mx-6 -mt-6">
+              <img src="{{ $image.RelPermalink }}" 
+                   alt="{{ $.Title }}"
+                   class="w-full h-48 object-cover rounded-t-lg"
+                   loading="lazy"
+                   width="{{ $image.Width }}"
+                   height="{{ $image.Height }}">
+            </a>
+          {{- end -}}
+          
+          <div class="flex flex-col space-y-3 flex-grow">
+            {{- /* Title */ -}}
+            <h2 class="text-xl font-semibold">
+              <a href="{{ .Permalink }}" 
+                 class="text-light-fg dark:text-dark-fg group-hover:text-light-primary dark:group-hover:text-dark-primary transition-colors">
+                {{ .Title }}
+              </a>
+            </h2>
+            
+            {{- /* Meta */ -}}
+            <div class="flex flex-wrap items-center gap-3 text-sm text-light-secondary dark:text-dark-secondary">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "Jan 2, 2006" }}
+              </time>
+              
+              {{- if .ReadingTime -}}
+                <span aria-hidden="true">•</span>
+                <span>{{ .ReadingTime }} min read</span>
+              {{- end -}}
+            </div>
+            
+            {{- /* Tags */ -}}
+            {{- if .Params.tags -}}
+              <div class="flex flex-wrap gap-2">
+                {{- range first 3 .Params.tags -}}
+                  <span class="text-xs px-2 py-1 rounded bg-light-muted dark:bg-dark-muted text-light-secondary dark:text-dark-secondary">
+                    {{ . }}
+                  </span>
+                {{- end -}}
+              </div>
+            {{- end -}}
+            
+            {{- /* Summary */ -}}
+            {{- if .Summary -}}
+              <p class="text-light-secondary dark:text-dark-secondary flex-grow">
+                {{ .Summary | truncate 120 }}
+              </p>
+            {{- end -}}
+            
+            {{- /* Read more link */ -}}
+            <div class="pt-4 mt-auto">
+              <a href="{{ .Permalink }}" 
+                 class="inline-flex items-center text-sm font-medium text-light-primary dark:text-dark-primary hover:text-light-accent dark:hover:text-dark-accent transition-colors"
+                 aria-label="Read {{ .Title }}">
+                Read more
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      {{- end -}}
+    </div>
+    
+    {{- /* Pagination */ -}}
+    {{- if .Paginator.TotalPages -}}
+      {{- if gt .Paginator.TotalPages 1 -}}
+        <nav class="flex justify-center mt-12" role="navigation" aria-label="Pagination">
+          <ul class="flex items-center space-x-2">
+            {{- if .Paginator.HasPrev -}}
+              <li>
+                <a href="{{ .Paginator.Prev.URL }}" 
+                   class="px-4 py-2 rounded-lg bg-light-muted dark:bg-dark-muted hover:bg-light-border dark:hover:bg-dark-border transition-colors"
+                   aria-label="Previous page">
+                  <span aria-hidden="true">←</span> Previous
+                </a>
+              </li>
+            {{- end -}}
+            
+            {{- range .Paginator.Pagers -}}
+              <li>
+                {{- if eq .PageNumber $.Paginator.PageNumber -}}
+                  <span class="px-4 py-2 rounded-lg bg-light-primary dark:bg-dark-primary text-white font-medium" aria-current="page">
+                    {{ .PageNumber }}
+                  </span>
+                {{- else -}}
+                  <a href="{{ .URL }}" 
+                     class="px-4 py-2 rounded-lg bg-light-muted dark:bg-dark-muted hover:bg-light-border dark:hover:bg-dark-border transition-colors"
+                     aria-label="Page {{ .PageNumber }}">
+                    {{ .PageNumber }}
+                  </a>
+                {{- end -}}
+              </li>
+            {{- end -}}
+            
+            {{- if .Paginator.HasNext -}}
+              <li>
+                <a href="{{ .Paginator.Next.URL }}" 
+                   class="px-4 py-2 rounded-lg bg-light-muted dark:bg-dark-muted hover:bg-light-border dark:hover:bg-dark-border transition-colors"
+                   aria-label="Next page">
+                  Next <span aria-hidden="true">→</span>
+                </a>
+              </li>
+            {{- end -}}
+          </ul>
+        </nav>
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    <div class="text-center py-12">
+      <p class="text-light-secondary dark:text-dark-secondary text-lg">
+        No posts found.
+      </p>
+    </div>
+  {{- end -}}
+</div>
+
+{{- end -}}
+

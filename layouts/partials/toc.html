@@ -1,0 +1,73 @@
+{{- /* Table of Contents */ -}}
+{{- if .TableOfContents -}}
+  <nav class="toc mb-8" aria-labelledby="toc-title">
+    <div class="flex items-center justify-between mb-4">
+      <h2 id="toc-title" class="text-lg font-semibold text-light-fg dark:text-dark-fg">
+        Table of Contents
+      </h2>
+      <button type="button" 
+              id="toc-toggle"
+              class="md:hidden text-sm text-light-secondary dark:text-dark-secondary"
+              aria-label="Toggle table of contents"
+              aria-expanded="true"
+              aria-controls="toc-content">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div id="toc-content" class="toc-nav">
+      {{ .TableOfContents }}
+    </div>
+  </nav>
+
+  <style>
+    /* Style the TOC links */
+    .toc-nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    
+    .toc-nav ul ul {
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+    
+    .toc-nav li {
+      margin-top: 0.5rem;
+    }
+    
+    .toc-nav a {
+      @apply toc-link;
+      display: block;
+      padding: 0.25rem 0;
+    }
+    
+    .toc-nav a.active {
+      @apply toc-link-active;
+    }
+    
+    /* Mobile toggle */
+    @media (max-width: 768px) {
+      #toc-content.hidden {
+        display: none;
+      }
+    }
+  </style>
+
+  <script>
+    // Mobile TOC toggle
+    const tocToggle = document.getElementById('toc-toggle');
+    const tocContent = document.getElementById('toc-content');
+    
+    if (tocToggle && tocContent) {
+      tocToggle.addEventListener('click', () => {
+        const isHidden = tocContent.classList.toggle('hidden');
+        tocToggle.setAttribute('aria-expanded', !isHidden);
+      });
+    }
+  </script>
+{{- end -}}
+

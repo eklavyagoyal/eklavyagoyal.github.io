@@ -1,0 +1,17 @@
+{{- /* JSON output for search indexing */ -}}
+{{- $pages := where .Site.RegularPages "Type" "in" (slice "posts" "teaching") -}}
+[
+  {{- range $index, $page := $pages -}}
+  {{- if $index -}},{{- end }}
+  {
+    "title": {{ $page.Title | jsonify }},
+    "url": {{ $page.Permalink | jsonify }},
+    "description": {{ $page.Description | jsonify }},
+    "content": {{ $page.Plain | jsonify }},
+    "date": {{ $page.Date.Format "2006-01-02" | jsonify }},
+    "tags": {{ $page.Params.tags | jsonify }},
+    "categories": {{ $page.Params.categories | jsonify }}
+  }
+  {{- end -}}
+]
+

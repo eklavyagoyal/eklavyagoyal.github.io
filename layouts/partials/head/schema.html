@@ -1,0 +1,115 @@
+{{- /* JSON-LD Structured Data for better SEO */ -}}
+
+{{- $schema := dict -}}
+
+{{- if .IsHome -}}
+  {{- /* Person schema for homepage */ -}}
+  {{- $schema = dict 
+    "@context" "https://schema.org"
+    "@type" "Person"
+    "name" .Site.Params.author
+    "url" .Site.BaseURL
+    "description" .Site.Params.description
+    "jobTitle" .Site.Params.info
+  -}}
+  
+  {{- /* Add image if available */ -}}
+  {{- with .Site.Params.avatarurl -}}
+    {{- $schema = merge $schema (dict "image" (. | absURL)) -}}
+  {{- end -}}
+  
+  {{- /* Add social media */ -}}
+  {{- $sameAs := slice -}}
+  {{- range .Site.Params.social -}}
+    {{- $sameAs = $sameAs | append .url -}}
+  {{- end -}}
+  {{- if gt (len $sameAs) 0 -}}
+    {{- $schema = merge $schema (dict "sameAs" $sameAs) -}}
+  {{- end -}}
+  
+  {{- /* Add affiliation */ -}}
+  {{- $schema = merge $schema (dict 
+    "affiliation" (dict
+      "@type" "Organization"
+      "name" "Technical University of Munich"
+      "url" "https://www.tum.de"
+    )
+  ) -}}
+
+{{- else if and .IsPage (eq .Type "posts") -}}
+  {{- /* Article schema for blog posts */ -}}
+  {{- $description := .Description | default .Summary -}}
+  {{- $image := "" -}}
+  {{- with .Params.featured_image -}}
+    {{- $image = . | absURL -}}
+  {{- else -}}
+    {{- with .Resources.GetMatch "featured*" -}}
+      {{- $image = .Permalink -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{- $schema = dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "description" $description
+    "url" .Permalink
+    "datePublished" (.PublishDate.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "author" (dict
+      "@type" "Person"
+      "name" (.Params.author | default .Site.Params.author)
+    )
+    "publisher" (dict
+      "@type" "Person"
+      "name" .Site.Params.author
+    )
+    "mainEntityOfPage" (dict
+      "@type" "WebPage"
+      "@id" .Permalink
+    )
+  -}}
+  
+  {{- if $image -}}
+    {{- $schema = merge $schema (dict "image" $image) -}}
+  {{- end -}}
+  
+  {{- with .Params.tags -}}
+    {{- $schema = merge $schema (dict "keywords" (delimit . ", ")) -}}
+  {{- end -}}
+
+{{- else if eq .Section "teaching" -}}
+  {{- /* Course schema for teaching pages */ -}}
+  {{- $schema = dict
+    "@context" "https://schema.org"
+    "@type" "Course"
+    "name" .Title
+    "description" (.Description | default .Summary)
+    "url" .Permalink
+    "provider" (dict
+      "@type" "Organization"
+      "name" "Technical University of Munich"
+      "url" "https://www.tum.de"
+    )
+    "instructor" (dict
+      "@type" "Person"
+      "name" .Site.Params.author
+    )
+  -}}
+
+{{- else -}}
+  {{- /* Generic webpage schema */ -}}
+  {{- $schema = dict
+    "@context" "https://schema.org"
+    "@type" "WebPage"
+    "name" .Title
+    "description" (.Description | default .Summary | default .Site.Params.description)
+    "url" .Permalink
+    "inLanguage" (.Site.Language.Lang | default "en")
+  -}}
+{{- end -}}
+
+<script type="application/ld+json">
+{{ $schema | jsonify | safeJS }}
+</script>
+

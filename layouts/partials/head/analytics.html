@@ -1,0 +1,21 @@
+{{- /* Analytics - Plausible (privacy-friendly) */ -}}
+{{- /* Only load in production */ -}}
+{{- if and hugo.IsProduction .Site.Params.analytics.plausible -}}
+  <script defer data-domain="{{ .Site.Params.analytics.plausible.domain | default (replace .Site.BaseURL "https://" "" | replace "/" "") }}" 
+          src="https://plausible.io/js/script.js"></script>
+{{- end -}}
+
+{{- /* Google Analytics (if needed) */ -}}
+{{- if and hugo.IsProduction .Site.Params.analytics.googleAnalytics -}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.analytics.googleAnalytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.Params.analytics.googleAnalytics }}', {
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+  </script>
+{{- end -}}
+

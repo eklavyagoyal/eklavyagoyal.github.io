@@ -1,0 +1,237 @@
+/**
+ * Main CSS Entry Point
+ * Processes TailwindCSS via Hugo Pipes
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Custom Base Styles
+ */
+@layer base {
+  /* Typography smoothing */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white dark:bg-dark-bg text-light-fg dark:text-dark-fg;
+    @apply transition-colors duration-300;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-light-primary dark:outline-dark-primary;
+  }
+  
+  /* Selection colors */
+  ::selection {
+    @apply bg-light-accent/20 dark:bg-dark-accent/20;
+  }
+}
+
+/**
+ * Custom Components
+ */
+@layer components {
+  /* Skip to content link for accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4;
+    @apply bg-light-primary dark:bg-dark-primary text-white;
+    @apply px-4 py-2 rounded-md font-medium;
+    @apply z-50;
+  }
+  
+  /* Container */
+  .container-prose {
+    @apply max-w-2xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center;
+    @apply px-4 py-2 rounded-lg font-medium;
+    @apply transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-light-primary dark:bg-dark-primary;
+    @apply text-white;
+    @apply hover:opacity-90;
+    @apply focus:ring-light-primary dark:focus:ring-dark-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-light-muted dark:bg-dark-muted;
+    @apply text-light-fg dark:text-dark-fg;
+    @apply hover:bg-light-border dark:hover:bg-dark-border;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-white dark:bg-dark-muted;
+    @apply border border-light-border dark:border-dark-border;
+    @apply rounded-lg p-6;
+    @apply shadow-sm hover:shadow-md;
+    @apply transition-shadow duration-200;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-light-fg dark:text-dark-fg;
+    @apply hover:text-light-primary dark:hover:text-dark-primary;
+    @apply transition-colors duration-200;
+    @apply font-medium;
+  }
+  
+  .nav-link-active {
+    @apply text-light-primary dark:text-dark-primary;
+  }
+  
+  /* Reading progress bar */
+  .reading-progress {
+    @apply fixed top-0 left-0 h-1 bg-light-accent dark:bg-dark-accent;
+    @apply z-50 transition-all duration-100;
+  }
+  
+  /* Table of Contents */
+  .toc {
+    @apply bg-light-muted dark:bg-dark-muted;
+    @apply border border-light-border dark:border-dark-border;
+    @apply rounded-lg p-4;
+  }
+  
+  .toc-link {
+    @apply block py-1 text-sm;
+    @apply text-light-secondary dark:text-dark-secondary;
+    @apply hover:text-light-primary dark:hover:text-dark-primary;
+    @apply transition-colors duration-150;
+  }
+  
+  .toc-link-active {
+    @apply text-light-primary dark:text-dark-primary font-medium;
+  }
+  
+  /* Toggle/Accordion */
+  .toggle-btn {
+    @apply w-full flex items-center justify-between;
+    @apply py-3 px-4 text-left font-medium;
+    @apply bg-light-muted dark:bg-dark-muted;
+    @apply hover:bg-light-border dark:hover:bg-dark-border;
+    @apply rounded-lg transition-colors duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-light-primary dark:focus:ring-dark-primary;
+  }
+  
+  .toggle-content {
+    @apply overflow-hidden transition-all duration-300;
+    @apply max-h-0 opacity-0;
+  }
+  
+  .toggle-content.open {
+    @apply max-h-[2000px] opacity-100 pt-4;
+  }
+  
+  /* Code blocks */
+  .code-header {
+    @apply flex items-center justify-between;
+    @apply bg-slate-800 dark:bg-slate-950;
+    @apply px-4 py-2 rounded-t-lg;
+    @apply border-b border-slate-700;
+  }
+  
+  .code-language {
+    @apply text-xs font-mono text-slate-400;
+    @apply uppercase tracking-wide;
+  }
+  
+  .copy-btn {
+    @apply text-xs text-slate-400 hover:text-slate-200;
+    @apply transition-colors duration-150;
+  }
+}
+
+/**
+ * Custom Utilities
+ */
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Smooth transitions */
+  .transition-theme {
+    @apply transition-colors duration-300;
+  }
+  
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-light-primary to-light-accent;
+    @apply dark:from-dark-primary dark:to-dark-accent;
+    @apply bg-clip-text text-transparent;
+  }
+  
+  /* Glass effect */
+  .glass {
+    @apply bg-white/80 dark:bg-dark-bg/80;
+    @apply backdrop-blur-md;
+    @apply border border-light-border/50 dark:border-dark-border/50;
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/**
+ * Third-party overrides
+ */
+
+/* KaTeX */
+.katex-display {
+  @apply my-6 overflow-x-auto;
+}
+
+.katex {
+  @apply text-base;
+}
+
+/* Syntax highlighting (Chroma) */
+.chroma {
+  @apply rounded-lg my-6;
+}
+
+.chroma code {
+  @apply font-mono text-sm;
+}
+
+/* Giscus comments */
+.giscus {
+  @apply mt-12;
+}
+
+/* Pagefind search */
+.pagefind-ui {
+  @apply text-light-fg dark:text-dark-fg;
+}
+
+.pagefind-ui__search-input {
+  @apply bg-light-muted dark:bg-dark-muted;
+  @apply border-light-border dark:border-dark-border;
+}
+

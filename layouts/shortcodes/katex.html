@@ -1,0 +1,18 @@
+{{- /* 
+  KaTeX Math Shortcode
+  Usage: {{< katex >}}E = mc^2{{< /katex >}}
+  For display mode: {{< katex display=true >}}E = mc^2{{< /katex >}}
+*/ -}}
+
+{{- $display := .Get "display" | default false -}}
+
+{{- if $display -}}
+  <div class="katex-display">
+    $${{ .Inner | safeHTML }}$$
+  </div>
+{{- else -}}
+  <span class="katex-inline">
+    ${{ .Inner | safeHTML }}$
+  </span>
+{{- end -}}
+

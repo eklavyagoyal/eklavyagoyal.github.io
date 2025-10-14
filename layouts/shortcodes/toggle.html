@@ -1,14 +1,61 @@
-<div class="toggle">
-    <h4 class="{{ .Get "class" }}" style="cursor: pointer;" onclick="toggleDetails('{{ .Get "id" }}')">{{ .Get "title" }}</h4>
-    <div id="{{ .Get "id" }}" style="display: none;">
-        {{ .Inner | safeHTML }}
+{{- /* 
+  Toggle/Accordion Shortcode
+  Usage: {{< toggle id="unique-id" title="Toggle Title" >}}Content here{{< /toggle >}}
+*/ -}}
+
+{{- $id := .Get "id" | default (printf "toggle-%d" (now.Unix)) -}}
+{{- $title := .Get "title" | default "Toggle" -}}
+{{- $open := .Get "open" | default false -}}
+{{- $class := .Get "class" | default "" -}}
+
+<div class="toggle-container mb-4 {{ $class }}" data-toggle-id="{{ $id }}">
+  <button 
+    type="button"
+    class="toggle-btn"
+    aria-expanded="{{ $open }}"
+    aria-controls="{{ $id }}-content"
+    data-toggle-btn="{{ $id }}">
+    <span class="flex-1 text-left">{{ $title | safeHTML }}</span>
+    <svg class="w-5 h-5 transition-transform duration-200" 
+         data-toggle-icon="{{ $id }}"
+         fill="none" 
+         stroke="currentColor" 
+         viewBox="0 0 24 24"
+         aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+  
+  <div 
+    id="{{ $id }}-content"
+    class="toggle-content {{ if $open }}open{{ end }}"
+    data-toggle-content="{{ $id }}">
+    <div class="p-4">
+      {{ .Inner | markdownify }}
     </div>
+  </div>
 </div>
 
 <script>
-function toggleDetails(courseId) {
-    const details = document.getElementById(courseId);
-    details.style.display = (details.style.display === "none" || details.style.display === "") ? "block" : "none";
-}
+  (function() {
+    const btn = document.querySelector('[data-toggle-btn="{{ $id }}"]');
+    const content = document.querySelector('[data-toggle-content="{{ $id }}"]');
+    const icon = document.querySelector('[data-toggle-icon="{{ $id }}"]');
+    
+    if (btn && content) {
+      btn.addEventListener('click', () => {
+        const isOpen = content.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen);
+        
+        if (icon) {
+          icon.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+      });
+      
+      // Set initial icon state
+      if (icon && content.classList.contains('open')) {
+        icon.style.transform = 'rotate(180deg)';
+      }
+    }
+  })();
 </script>
-

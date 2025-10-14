@@ -1,0 +1,55 @@
+{{- /* Related Posts - based on tags */ -}}
+{{- $related := .Site.RegularPages.Related . | first 3 -}}
+
+{{- if $related -}}
+  <section class="mt-12" aria-labelledby="related-posts-title">
+    <h3 id="related-posts-title" class="text-2xl font-bold text-light-fg dark:text-dark-fg mb-6">
+      Related Posts
+    </h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {{- range $related -}}
+        <article class="card">
+          {{- /* Featured image thumbnail */ -}}
+          {{- with .Resources.GetMatch "featured*" -}}
+            {{- $image := .Resize "400x200" -}}
+            <a href="{{ $.Permalink }}" class="block mb-3 -mx-6 -mt-6">
+              <img src="{{ $image.RelPermalink }}" 
+                   alt="{{ $.Title }}"
+                   class="w-full h-32 object-cover rounded-t-lg"
+                   loading="lazy"
+                   width="{{ $image.Width }}"
+                   height="{{ $image.Height }}">
+            </a>
+          {{- end -}}
+          
+          <div class="space-y-3">
+            <h4 class="font-semibold">
+              <a href="{{ .Permalink }}" 
+                 class="text-light-fg dark:text-dark-fg hover:text-light-primary dark:hover:text-dark-primary transition-colors">
+                {{ .Title }}
+              </a>
+            </h4>
+            
+            <div class="text-sm text-light-secondary dark:text-dark-secondary">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "Jan 2, 2006" }}
+              </time>
+              {{- if .ReadingTime -}}
+                <span aria-hidden="true"> • </span>
+                <span>{{ .ReadingTime }} min read</span>
+              {{- end -}}
+            </div>
+            
+            {{- if .Summary -}}
+              <p class="text-sm text-light-secondary dark:text-dark-secondary">
+                {{ .Summary | truncate 100 }}
+              </p>
+            {{- end -}}
+          </div>
+        </article>
+      {{- end -}}
+    </div>
+  </section>
+{{- end -}}
+

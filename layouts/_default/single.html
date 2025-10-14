@@ -1,0 +1,176 @@
+{{- define "main" -}}
+{{- /* Single page/post layout with TOC, reading progress, and related posts */ -}}
+
+<article class="py-12 md:py-20">
+  <div class="container-prose">
+    {{- /* Article header */ -}}
+    <header class="mb-12 space-y-6">
+      {{- /* Title */ -}}
+      <h1 class="text-4xl md:text-5xl font-bold text-light-fg dark:text-dark-fg text-balance">
+        {{ .Title }}
+      </h1>
+      
+      {{- /* Meta information */ -}}
+      {{- if eq .Type "posts" -}}
+        <div class="flex flex-wrap items-center gap-4 text-sm text-light-secondary dark:text-dark-secondary">
+          {{- /* Date */ -}}
+          <div class="flex items-center space-x-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+          </div>
+          
+          {{- /* Reading time */ -}}
+          {{- if .ReadingTime -}}
+            <span aria-hidden="true">•</span>
+            <div class="flex items-center space-x-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              <span>{{ .ReadingTime }} min read</span>
+            </div>
+          {{- end -}}
+          
+          {{- /* Word count */ -}}
+          {{- if .WordCount -}}
+            <span aria-hidden="true">•</span>
+            <span>{{ .WordCount }} words</span>
+          {{- end -}}
+          
+          {{- /* Last modified */ -}}
+          {{- if and .Lastmod (ne .Date .Lastmod) -}}
+            <span aria-hidden="true">•</span>
+            <span title="Last updated: {{ .Lastmod.Format "January 2, 2006" }}">
+              Updated {{ .Lastmod.Format "Jan 2, 2006" }}
+            </span>
+          {{- end -}}
+        </div>
+      {{- end -}}
+      
+      {{- /* Tags */ -}}
+      {{- if .Params.tags -}}
+        <div class="flex flex-wrap gap-2">
+          {{- range .Params.tags -}}
+            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" 
+               class="text-xs px-3 py-1 rounded-full bg-light-muted dark:bg-dark-muted hover:bg-light-border dark:hover:bg-dark-border transition-colors">
+              #{{ . }}
+            </a>
+          {{- end -}}
+        </div>
+      {{- end -}}
+      
+      {{- /* Description */ -}}
+      {{- if .Description -}}
+        <p class="text-xl text-light-secondary dark:text-dark-secondary">
+          {{ .Description }}
+        </p>
+      {{- end -}}
+      
+      {{- /* Featured image */ -}}
+      {{- with .Resources.GetMatch "featured*" -}}
+        {{- $image := .Resize "1200x" -}}
+        <figure class="-mx-4 sm:mx-0">
+          <img src="{{ $image.RelPermalink }}" 
+               alt="{{ $.Title }}"
+               class="w-full rounded-lg shadow-lg"
+               loading="eager"
+               width="{{ $image.Width }}"
+               height="{{ $image.Height }}">
+          {{- with $.Params.featured_image_caption -}}
+            <figcaption class="mt-2 text-sm text-center text-light-secondary dark:text-dark-secondary">
+              {{ . }}
+            </figcaption>
+          {{- end -}}
+        </figure>
+      {{- end -}}
+    </header>
+    
+    {{- /* Table of Contents (for blog posts) */ -}}
+    {{- if and (eq .Type "posts") (.Params.toc | default true) -}}
+      {{- if .TableOfContents -}}
+        {{- partial "toc.html" . -}}
+      {{- end -}}
+    {{- end -}}
+    
+    {{- /* Main content */ -}}
+    <div class="prose dark:prose-dark max-w-none">
+      {{ .Content }}
+    </div>
+    
+    {{- /* Footer */ -}}
+    <footer class="mt-12 pt-8 border-t border-light-border dark:border-dark-border space-y-8">
+      {{- /* Share buttons */ -}}
+      {{- if eq .Type "posts" -}}
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="text-sm font-medium text-light-fg dark:text-dark-fg">
+            Share this post:
+          </span>
+          
+          {{- $url := .Permalink -}}
+          {{- $title := .Title -}}
+          
+          <a href="https://twitter.com/intent/tweet?url={{ $url }}&text={{ $title }}" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="btn btn-secondary text-xs"
+             aria-label="Share on Twitter">
+            Twitter
+          </a>
+          
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $url }}" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="btn btn-secondary text-xs"
+             aria-label="Share on LinkedIn">
+            LinkedIn
+          </a>
+          
+          <button type="button" 
+                  onclick="navigator.clipboard.writeText('{{ $url }}'); this.textContent = 'Copied!'; setTimeout(() => this.textContent = 'Copy link', 2000);"
+                  class="btn btn-secondary text-xs"
+                  aria-label="Copy link">
+            Copy link
+          </button>
+        </div>
+      {{- end -}}
+      
+      {{- /* Author bio */ -}}
+      {{- if eq .Type "posts" -}}
+        <div class="card">
+          <div class="flex items-start space-x-4">
+            {{- if .Site.Params.avatarurl -}}
+              <img src="{{ .Site.Params.avatarurl }}" 
+                   alt="{{ .Site.Params.author }}" 
+                   class="w-16 h-16 rounded-full"
+                   loading="lazy">
+            {{- end -}}
+            <div class="flex-1">
+              <h3 class="font-semibold text-light-fg dark:text-dark-fg mb-1">
+                {{ .Params.author | default .Site.Params.author }}
+              </h3>
+              <p class="text-sm text-light-secondary dark:text-dark-secondary">
+                {{ .Site.Params.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      {{- end -}}
+      
+      {{- /* Related posts */ -}}
+      {{- if eq .Type "posts" -}}
+        {{- partial "related-posts.html" . -}}
+      {{- end -}}
+      
+      {{- /* Comments (Giscus) */ -}}
+      {{- if and (eq .Type "posts") (.Params.comments | default true) -}}
+        {{- partial "comments.html" . -}}
+      {{- end -}}
+    </footer>
+  </div>
+</article>
+
+{{- end -}}
+
