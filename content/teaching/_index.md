@@ -6,11 +6,11 @@ draft = false
 # Courses I Am Tutoring
 Here's a list of courses and tutorial sessions I will be tutoring for the upcoming semester.
 
-## Winter Semester 2024/25(WS24/25)
+## Winter Semester 2025/26(WS25/26)
 {{< toggle id="ma9202-ws26" title="[MA9202] Mathematics for Physicists 2: Analysis 1" class="large-heading" >}}
 <ul>
     <li><strong>Room</strong>:  <a href="https://nav.tum.de/room/5503.EG.337">Room 5503.EG.337(Seminarraum)</a> , Maschienenwesen(Mechanical) Building</li>  
-    <li><strong>Time</strong>: Thursdays, 10:00 - 12:00</li>
+    <li><strong>Time</strong>: Thursdays, 10:15 - 11:50</li>
     <li><strong>Description</strong>: This module introduces fundamental concepts and methods of analysis through the study of functions of a single variable. Upon successful completion of the course, students will be well-acquainted with the central concept of approximation and will be equipped to apply their knowledge effectively to solve basic problems.</li>
     <li><strong>Contents</strong>:
      <ul class="custom-bullets">The following topics will be covered during this course.
@@ -25,6 +25,7 @@ Here's a list of courses and tutorial sessions I will be tutoring for the upcomi
         <li>Banach spaces and matrixexponential</li>
     </ul></li>
     <li><strong>Material</strong>:&nbsp;<a href="notes/ma9202-ws26/">Download Course Materials</a></li>
+    <li><strong>WhatsApp Group</strong>:&nbsp;<a href="https://chat.whatsapp.com/Ct3CKdDNDThIfqODLUxxcL">Join Here</a> </li>
 </ul>
 {{< /toggle >}}
 

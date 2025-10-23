@@ -15,6 +15,13 @@ No class this week...
 
 {{< toggle id="ma9202week02" title="Week 02 (Oct 20 - Oct 24)" >}}
 
+<ul> 
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week02-sol.pdf>Handwritten solutions of Week 2 T-Questions, Version: 23.10.2025</a></li>
+    <li><strong>Board pics</strong>:<a href=/pdf/ma9202-ws26/board-pics/week02-board.pdf>Version: 23.10.2025 </a></li>
+    <li><strong>Presentation</strong>:<a href=/pdf/ma9202-ws26/notes/week02-presentation.pdf>Version: 23.10.2025 </a></li>
+
+</ul>
+
 {{< /toggle >}}
 
 

@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:54769/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-10-05T22:46:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:54769/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-10-05T22:46:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:54769/posts/05.10.2024.01/</loc>
+    <loc>http://localhost:1313/posts/05.10.2024.01/</loc>
     <lastmod>2024-10-05T22:46:47+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:54769/teaching/</loc>
+    <loc>http://localhost:1313/teaching/</loc>
     <lastmod>2024-10-05T18:33:29+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:54769/teaching/notes/</loc>
+    <loc>http://localhost:1313/teaching/notes/</loc>
     <lastmod>2024-10-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:54769/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>http://localhost:54769/authors/</loc>
+    <loc>http://localhost:1313/authors/</loc>
   </url><url>
-    <loc>http://localhost:54769/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:54769/teaching/notes/ma9202-ws26/</loc>
+    <loc>http://localhost:1313/teaching/notes/ma9202-ws26/</loc>
   </url><url>
-    <loc>http://localhost:54769/teaching/notes/ma9202/</loc>
+    <loc>http://localhost:1313/teaching/notes/ma9202/</loc>
   </url><url>
-    <loc>http://localhost:54769/teaching/notes/ma9203/</loc>
+    <loc>http://localhost:1313/teaching/notes/ma9203/</loc>
   </url><url>
-    <loc>http://localhost:54769/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
   </url><url>
-    <loc>http://localhost:54769/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
