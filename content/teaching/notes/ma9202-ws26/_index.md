@@ -27,6 +27,12 @@ No class this week...
 
 {{< toggle id="ma9202week03" title="Week 03 (Oct 27 - Oct 31)" >}}
 
+<ul> 
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week03-sol.pdf>Handwritten solutions of Week 3 T-Questions, Version: 31.10.2025</a></li>
+    <li><strong>Board pics</strong>:<a href=/pdf/ma9202-ws26/board-pics/week03-board.pdf>Version: 31.2025 </a></li>
+</ul>
+
+
 {{< /toggle >}}
 
 
