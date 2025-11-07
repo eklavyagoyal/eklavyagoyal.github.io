@@ -17,8 +17,8 @@ No class this week...
 
 <ul> 
     <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week02-sol.pdf>Handwritten solutions of Week 2 T-Questions, Version: 23.10.2025</a></li>
-    <li><strong>Board pics</strong>:<a href=/pdf/ma9202-ws26/board-pics/week02-board.pdf>Version: 23.10.2025 </a></li>
-    <li><strong>Presentation</strong>:<a href=/pdf/ma9202-ws26/notes/week02-presentation.pdf>Version: 23.10.2025 </a></li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week02-board.pdf>Version: 23.10.2025 </a></li>
+    <li><strong>Presentation</strong>:&nbsp<a href=/pdf/ma9202-ws26/notes/week02-presentation.pdf>Version: 23.10.2025 </a></li>
 
 </ul>
 
@@ -29,7 +29,7 @@ No class this week...
 
 <ul> 
     <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week03-sol.pdf>Handwritten solutions of Week 3 T-Questions, Version: 31.10.2025</a></li>
-    <li><strong>Board pics</strong>:<a href=/pdf/ma9202-ws26/board-pics/week03-board.pdf>Version: 31.2025 </a></li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week03-board.pdf>Version: 31.10.2025 </a></li>
 </ul>
 
 
@@ -37,6 +37,12 @@ No class this week...
 
 
 {{< toggle id="ma9202week04" title="Week 04 (Nov 03 - Nov 07)" >}}
+
+<ul> 
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week04-sol.pdf>Handwritten solutions of Week 3 T-Questions, Version: 07.11.2025</a></li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week04-board.pdf>Version: 07.11.2025 </a></li>
+</ul>
+<strong>Recommended youtube playlists</strong>:&nbsp<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a> and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"> Essence of Calculus</a> form 3 Blue 1 Brown. </li>
 
 {{< /toggle >}}
 
