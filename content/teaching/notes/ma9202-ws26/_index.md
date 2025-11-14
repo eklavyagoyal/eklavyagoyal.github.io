@@ -39,7 +39,7 @@ No class this week...
 {{< toggle id="ma9202week04" title="Week 04 (Nov 03 - Nov 07)" >}}
 
 <ul> 
-    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week04-sol.pdf>Handwritten solutions of Week 3 T-Questions, Version: 07.11.2025</a></li>
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week04-sol.pdf>Handwritten solutions of Week 4 T-Questions, Version: 07.11.2025</a></li>
     <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week04-board.pdf>Version: 07.11.2025 </a></li>
 </ul>
 <strong>Recommended youtube playlists</strong>:&nbsp<a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a> and <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"> Essence of Calculus</a> form 3 Blue 1 Brown. </li>
@@ -48,6 +48,15 @@ No class this week...
 
 
 {{< toggle id="ma9202week05" title="Week 05 (Nov 10 - Nov 14)" >}}
+My tutorial will be conducted by a substitute as I am on sick leave.
+<ul> 
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week05-sol.pdf>Handwritten solutions of Week 5 T-Questions, Version: 14.11.2025</a></li>
+    <li><strong>Board pics</strong>:&nbsp Not available</li>
+</ul>
+
+<video controls autoplay muted loop width="700">
+  <source src="/videos/ma9202-ws26/week05-animation.mp4" type="video/mp4">
+</video>
 
 {{< /toggle >}}
 
