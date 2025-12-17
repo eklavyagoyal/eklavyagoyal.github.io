@@ -62,22 +62,38 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 
 
 {{< toggle id="ma9202week06" title="Week 06 (Nov 17 - Nov 21)" >}}
+<ul> 
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week06-sol.pdf>Handwritten solutions of Week 6 T-Questions, Version: 17.12.2025</a></li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week06-board.pdf>Version: 17.12.2025 </a></li>
+</ul>
 
 {{< /toggle >}}
 
 
 {{< toggle id="ma9202week07" title="Week 07 (Nov 24 - Nov 28)" >}}
 
+<ul>
+     <li><strong>Notes</strong>:&nbsp<a href=/pdf/notes/week07_solutions.pdf> Notes, Version: 17.12.2025 </a> &nbsp and  &nbsp<a href=/pdf/notes/week07_notes.pdf> On continuity, Version: 17.12.2025</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week07-board.pdf>Version: 17.12.2025 </a></li>
+</ul>
 {{< /toggle >}}
 
 
 {{< toggle id="ma9202week08" title="Week 08 (Dec 01 - Dec 05)" >}}
 
+<ul>
+    <li><strong>Notes</strong>:&nbsp<a href=/pdf/notes/week08_notes.pdf> Notes on Landau symbols and Differentiability, Version: 17.12.2025</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week08-board.pdf>Version: 17.12.2025 </a></li>
+</ul>
 {{< /toggle >}}
 
 
 {{< toggle id="ma9202week09" title="Week 09 (Dec 08 - Dec 12)" >}}
-
+<ul>
+    <li><strong>Lecture Summary</strong>:&nbsp<a href=/pdf/notes/week09_notes.pdf>Notes on L'Hopital's Rule, MVT and Curve sketching, Version: 17.12.2025</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week09-board.pdf>Version: 17.12.2025</a> </li>
+    <li><strong>Miscellaneous</strong>:&nbsp <a href=/pdf/altklausuren/kurvendiskussion_aufgaben.pdf>Other questions on Curve Sketching, Version: 17.11.2025</a></li>
+</ul>
 {{< /toggle >}}
 
 
