@@ -99,6 +99,12 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 
 {{< toggle id="ma9202week10" title="Week 10 (Dec 15 - Dec 19)" >}}
 
+<ul> 
+    <li><strong>Solutions</strong>:&nbsp;<a href=/pdf/ma9202-ws26/solutions/week10-sol.pdf>Handwritten solutions of Week 10 T-Questions, Version: 18.12.2025</a></li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week10-board.pdf>Version: 18.12.2025 </a></li>
+</ul>
+
+
 {{< /toggle >}}
 
 
