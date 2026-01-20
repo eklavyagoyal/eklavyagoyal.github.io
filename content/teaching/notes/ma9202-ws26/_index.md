@@ -109,12 +109,16 @@ My tutorial will be conducted by a substitute as I am on sick leave.
 
 
 {{< toggle id="ma9202week11" title="Week 11 (Jan 05 - Jan 09)" >}}
-
+My tutorial will be conducted by a substitute as I am not in Munich.
 {{< /toggle >}}
 
 
 {{< toggle id="ma9202week12" title="Week 12 (Jan 12 - Jan 16)" >}}
-
+<ul>
+    <li><strong>Notes</strong>:&nbsp<a href=/pdf/ma9202-ws26/notes/week12-notes.pdf>Notes on Sequences of Functions, Version: 20.01.2026</a> </li>
+    <li><strong>Solutions</strong>:&nbsp<a href=/pdf/ma9202-ws26/solutions/week12-sol.pdf>Handwritten solutions of Week 12 T-Questions, Version: 20.01.2026</a> </li>
+    <li><strong>Board pics</strong>:&nbsp<a href=/pdf/ma9202-ws26/board-pics/week12-board.pdf>Version: 20.01.2026</a> </li>
+</ul>
 {{< /toggle >}}
 
 
